@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>hexo deploy | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Hexo post process git add . git commit -m “anything” git push origin hexo //提交到hexo分支，保存hexo项目完整文件 hexo clean hexo g -d //deploy hexo blog">
+  <meta name="description" content="Hexo post process git add . git commit -m “anything” git push origin hexo //提交到hexo分支，保存hexo项目完整文件 hexo clean hexo g -d //deploy hexo blog  hexo部署方式参考https://www.zhihu.com/question/21193762 CrazyMilk的">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo deploy">
 <meta property="og:url" content="http://yoursite.com/2019/07/10/hexo-deploy/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Hexo post process git add . git commit -m “anything” git push origin hexo //提交到hexo分支，保存hexo项目完整文件 hexo clean hexo g -d //deploy hexo blog">
+<meta property="og:description" content="Hexo post process git add . git commit -m “anything” git push origin hexo //提交到hexo分支，保存hexo项目完整文件 hexo clean hexo g -d //deploy hexo blog  hexo部署方式参考https://www.zhihu.com/question/21193762 CrazyMilk的">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-09T16:52:00.150Z">
+<meta property="og:updated_time" content="2019-07-10T03:40:21.720Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo deploy">
-<meta name="twitter:description" content="Hexo post process git add . git commit -m “anything” git push origin hexo //提交到hexo分支，保存hexo项目完整文件 hexo clean hexo g -d //deploy hexo blog">
+<meta name="twitter:description" content="Hexo post process git add . git commit -m “anything” git push origin hexo //提交到hexo分支，保存hexo项目完整文件 hexo clean hexo g -d //deploy hexo blog  hexo部署方式参考https://www.zhihu.com/question/21193762 CrazyMilk的">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -181,6 +181,21 @@
 <li>hexo clean</li>
 <li>hexo g -d //deploy hexo blog</li>
 </ol>
+<p>hexo部署方式参考<a href="https://www.zhihu.com/question/21193762" target="_blank" rel="noopener">https://www.zhihu.com/question/21193762</a> CrazyMilk的方法</p>
+<h3 id="build-process-first-time"><a href="#build-process-first-time" class="headerlink" title="build process(first time)"></a>build process(first time)</h3><ol>
+<li>搭建仓库，chenyuyan.github.io;</li>
+<li>创建两个分支：master and hexo;</li>
+<li>设置hexo为default branch(hexo分支保存博客的完整hexo文件);</li>
+<li>git clone <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:chenyuyuan/chenyuyuan.github.io.git;</li>
+<li>在chenyuyuan.github.io目录下执行npm install hexo, hexo init “$blogname”, npm install, npm install hexo-deployer-git;</li>
+<li>修改_config.yml的deploy: master;</li>
+<li>执行git add ., git commit -m “anything”, git push origin hexo</li>
+<li>部署博客到网站上, hexo clean, hexo g -d</li>
+</ol>
+<h3 id="deploy-in-new-device"><a href="#deploy-in-new-device" class="headerlink" title="deploy in new device"></a>deploy in new device</h3><ol>
+<li>git clone <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:chenyuyuan/chenyuyuan.github.io.git (默认分支是hexo)</li>
+<li>在chenyuyuan.github.io目录下执行npm install hexo, npm install, npm install hexo-deployer-git</li>
+</ol>
 
       
 
@@ -275,8 +290,8 @@
 <nav id="article-nav">
   
   
-    <a href="/2019/07/10/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2019/06/07/my-first-blog/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">my first blog</div>
       <i class="icon-circle-right"></i>
     </a>
   
