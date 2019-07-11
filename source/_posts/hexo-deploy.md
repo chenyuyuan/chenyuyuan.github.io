@@ -1,7 +1,7 @@
 ---
 title: hexo deploy
 date: 2019-07-10 00:28:49
-tags:
+tags: hexo
 ---
 
 ### Hexo post process
