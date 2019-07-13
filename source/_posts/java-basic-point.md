@@ -2,6 +2,7 @@
 title: java basic point
 date: 2019-07-10 20:53:38
 tags: Java
+categories: Java
 ---
 
 ### How Java Run?
