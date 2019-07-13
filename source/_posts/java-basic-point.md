@@ -8,7 +8,7 @@ categories: Java
 ### How Java Run?
 
 source code -> using Java compiler ->compile the source code to byte code(.class file) 
-
+<!-- more -->
 -> ||------------------------------------------------------||       <-(this is JRE)
 
 ​     || -> 类装载器 ->字节码检验器->解释器     ||    ->系统平台

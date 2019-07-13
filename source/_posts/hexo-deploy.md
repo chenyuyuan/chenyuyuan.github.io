@@ -13,6 +13,7 @@ tags: hexo
 5. hexo g -d //deploy hexo blog
 
 hexo部署方式参考https://www.zhihu.com/question/21193762 CrazyMilk的方法
+<!-- more -->
 
 ### build process(first time)
 
