@@ -6,20 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>win10和ubuntu双系统k380的配置 | Hexo</title>
+  <title>Tag: hexo | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="操作步骤1.首先在 Windows 10 系统中连上蓝牙鼠标，目的是留下连接记录，方便之后来修改连接值。 2.在 Ubuntu 18.04 系统中连上蓝牙键盘。  3.获取 Ubuntu 18.04 系统中的蓝牙配对 linkkey 值。 首先切换到 root 账户：su 然后执行：cd /var/lib/bluetooth/ 执行ls（两个小写的L），获得电脑的蓝牙地址：xx:xx:xx:xx:">
-<meta name="keywords" content="Ubuntu">
-<meta property="og:type" content="article">
-<meta property="og:title" content="win10和ubuntu双系统k380的配置">
-<meta property="og:url" content="http://yoursite.com/2019/07/10/win10和ubuntu双系统k380的配置/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/tags/hexo/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="操作步骤1.首先在 Windows 10 系统中连上蓝牙鼠标，目的是留下连接记录，方便之后来修改连接值。 2.在 Ubuntu 18.04 系统中连上蓝牙键盘。  3.获取 Ubuntu 18.04 系统中的蓝牙配对 linkkey 值。 首先切换到 root 账户：su 然后执行：cd /var/lib/bluetooth/ 执行ls（两个小写的L），获得电脑的蓝牙地址：xx:xx:xx:xx:">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-12T08:40:41.947Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="win10和ubuntu双系统k380的配置">
-<meta name="twitter:description" content="操作步骤1.首先在 Windows 10 系统中连上蓝牙鼠标，目的是留下连接记录，方便之后来修改连接值。 2.在 Ubuntu 18.04 系统中连上蓝牙键盘。  3.获取 Ubuntu 18.04 系统中的蓝牙配对 linkkey 值。 首先切换到 root 账户：su 然后执行：cd /var/lib/bluetooth/ 执行ls（两个小写的L），获得电脑的蓝牙地址：xx:xx:xx:xx:">
+<meta name="twitter:title" content="Hexo">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -155,200 +150,60 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-win10和ubuntu双系统k380的配置" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      win10和ubuntu双系统k380的配置
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/07/10/hexo-deploy/" class="archive-article-date">
+  	<time datetime="2019-07-09T16:28:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-10</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/07/10/hexo-deploy/">hexo deploy</a>
     </h1>
   
 
-        
-        <a href="/2019/07/10/win10和ubuntu双系统k380的配置/" class="archive-article-date">
-  	<time datetime="2019-07-10T04:41:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h3><p>1.首先在 Windows 10 系统中连上蓝牙鼠标，目的是留下连接记录，方便之后来修改连接值。</p>
-<p>2.在 Ubuntu 18.04 系统中连上蓝牙键盘。 </p>
-<p>3.获取 Ubuntu 18.04 系统中的蓝牙配对 linkkey 值。</p>
-<p>首先切换到 root 账户：su</p>
-<p>然后执行：cd /var/lib/bluetooth/</p>
-<p>执行ls（两个小写的L），获得电脑的蓝牙地址：xx:xx:xx:xx:xx:xx:xx:xx</p>
-<p>cd 这个地址，再次执行 ls，获得鼠标的蓝牙地址：xx:xx:xx:xx:xx:xx:xx:xx</p>
-<p>cd 鼠标的蓝牙地址，并执行：cat info</p>
-<p>找到 [LinkKey]，记下这个值：</p>
-<p>Key=(……………. …………….)&lt;-一个32位十六进制的数。</p>
-<p>4.再回到 Windows 10 系统，此时蓝牙鼠标已经自动连接上了（之前有连接记录），但是不能操控。这个时候先到微软官网下载 <a href="https://docs.microsoft.com/zh-cn/sysinternals/downloads/psexec" target="_blank" rel="noopener">PSTools</a> 工具</p>
-<p>下载 PSTools 完成后解压到文件夹即可，在文件夹内以管理员身份运行 cmd，执行：PsExec.exe -s -i regedit</p>
-<p>找到 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\BTHPORT\Parameters\Keys\ 下的文件夹，正常情况下是以电脑 mac 地址命名的，找到文件夹内的以蓝牙鼠标 mac 地址命名的文件，修改它的值为之前第三步获取的 key 的值即可。</p>
-<p>5.重新启动电脑，这时随便你进入 Ubuntu 18.04，或是进入 Windows 10 系统都能正常使用了。</p>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Ubuntu</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/10/win10和ubuntu双系统k380的配置/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2019/07/10/java-basic-point/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          java basic point
-        
-      </div>
-    </a>
   
   
-    <a href="/2019/07/10/hexo-deploy/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">hexo deploy</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
-  
-  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
-<script>
-  var cloudTieConfig = {
-    url: "http://yoursite.com/2019/07/10/win10和ubuntu双系统k380的配置/", 
-    sourceId: "win10和ubuntu双系统k380的配置",
-    productKey: "true",
-    target: "cloud-tie-wrapper"
-  };
-</script>
-<script src="//img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -371,9 +226,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,

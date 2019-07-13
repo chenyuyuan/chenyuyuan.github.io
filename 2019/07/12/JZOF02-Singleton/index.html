@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>win10和ubuntu双系统k380的配置 | Hexo</title>
+  <title>JZOF02 Singleton | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="操作步骤1.首先在 Windows 10 系统中连上蓝牙鼠标，目的是留下连接记录，方便之后来修改连接值。 2.在 Ubuntu 18.04 系统中连上蓝牙键盘。  3.获取 Ubuntu 18.04 系统中的蓝牙配对 linkkey 值。 首先切换到 root 账户：su 然后执行：cd /var/lib/bluetooth/ 执行ls（两个小写的L），获得电脑的蓝牙地址：xx:xx:xx:xx:">
-<meta name="keywords" content="Ubuntu">
+  <meta name="description" content="问题描述：实现Singleton模式，设计一个类，只能生成该类的一个实例。">
+<meta name="keywords" content="book,剑指offer">
 <meta property="og:type" content="article">
-<meta property="og:title" content="win10和ubuntu双系统k380的配置">
-<meta property="og:url" content="http://yoursite.com/2019/07/10/win10和ubuntu双系统k380的配置/index.html">
+<meta property="og:title" content="JZOF02 Singleton">
+<meta property="og:url" content="http://yoursite.com/2019/07/12/JZOF02-Singleton/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="操作步骤1.首先在 Windows 10 系统中连上蓝牙鼠标，目的是留下连接记录，方便之后来修改连接值。 2.在 Ubuntu 18.04 系统中连上蓝牙键盘。  3.获取 Ubuntu 18.04 系统中的蓝牙配对 linkkey 值。 首先切换到 root 账户：su 然后执行：cd /var/lib/bluetooth/ 执行ls（两个小写的L），获得电脑的蓝牙地址：xx:xx:xx:xx:">
+<meta property="og:description" content="问题描述：实现Singleton模式，设计一个类，只能生成该类的一个实例。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-12T08:40:41.947Z">
+<meta property="og:updated_time" content="2019-07-13T07:27:05.334Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="win10和ubuntu双系统k380的配置">
-<meta name="twitter:description" content="操作步骤1.首先在 Windows 10 系统中连上蓝牙鼠标，目的是留下连接记录，方便之后来修改连接值。 2.在 Ubuntu 18.04 系统中连上蓝牙键盘。  3.获取 Ubuntu 18.04 系统中的蓝牙配对 linkkey 值。 首先切换到 root 账户：su 然后执行：cd /var/lib/bluetooth/ 执行ls（两个小写的L），获得电脑的蓝牙地址：xx:xx:xx:xx:">
+<meta name="twitter:title" content="JZOF02 Singleton">
+<meta name="twitter:description" content="问题描述：实现Singleton模式，设计一个类，只能生成该类的一个实例。">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -155,40 +155,27 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-win10和ubuntu双系统k380的配置" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-JZOF02-Singleton" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      win10和ubuntu双系统k380的配置
+      JZOF02 Singleton
     </h1>
   
 
         
-        <a href="/2019/07/10/win10和ubuntu双系统k380的配置/" class="archive-article-date">
-  	<time datetime="2019-07-10T04:41:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-10</time>
+        <a href="/2019/07/12/JZOF02-Singleton/" class="archive-article-date">
+  	<time datetime="2019-07-12T15:24:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-12</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h3><p>1.首先在 Windows 10 系统中连上蓝牙鼠标，目的是留下连接记录，方便之后来修改连接值。</p>
-<p>2.在 Ubuntu 18.04 系统中连上蓝牙键盘。 </p>
-<p>3.获取 Ubuntu 18.04 系统中的蓝牙配对 linkkey 值。</p>
-<p>首先切换到 root 账户：su</p>
-<p>然后执行：cd /var/lib/bluetooth/</p>
-<p>执行ls（两个小写的L），获得电脑的蓝牙地址：xx:xx:xx:xx:xx:xx:xx:xx</p>
-<p>cd 这个地址，再次执行 ls，获得鼠标的蓝牙地址：xx:xx:xx:xx:xx:xx:xx:xx</p>
-<p>cd 鼠标的蓝牙地址，并执行：cat info</p>
-<p>找到 [LinkKey]，记下这个值：</p>
-<p>Key=(……………. …………….)&lt;-一个32位十六进制的数。</p>
-<p>4.再回到 Windows 10 系统，此时蓝牙鼠标已经自动连接上了（之前有连接记录），但是不能操控。这个时候先到微软官网下载 <a href="https://docs.microsoft.com/zh-cn/sysinternals/downloads/psexec" target="_blank" rel="noopener">PSTools</a> 工具</p>
-<p>下载 PSTools 完成后解压到文件夹即可，在文件夹内以管理员身份运行 cmd，执行：PsExec.exe -s -i regedit</p>
-<p>找到 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\BTHPORT\Parameters\Keys\ 下的文件夹，正常情况下是以电脑 mac 地址命名的，找到文件夹内的以蓝牙鼠标 mac 地址命名的文件，修改它的值为之前第三步获取的 key 的值即可。</p>
-<p>5.重新启动电脑，这时随便你进入 Ubuntu 18.04，或是进入 Windows 10 系统都能正常使用了。</p>
+        <p>问题描述：实现Singleton模式，设计一个类，只能生成该类的一个实例。</p>
 
       
 
@@ -223,13 +210,28 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Ubuntu</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">book</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">剑指offer</a>
         		</li>
       		
 		</ul>
 	</div>
 
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/note//" class="article-tag-list-link color5">note</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -279,7 +281,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/10/win10和ubuntu双系统k380的配置/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/12/JZOF02-Singleton/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -293,18 +295,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/07/10/java-basic-point/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          java basic point
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/07/10/hexo-deploy/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">hexo deploy</div>
+    <a href="/2019/07/12/Linux常用命令/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Linux常用命令</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -335,8 +328,8 @@
   <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
 <script>
   var cloudTieConfig = {
-    url: "http://yoursite.com/2019/07/10/win10和ubuntu双系统k380的配置/", 
-    sourceId: "win10和ubuntu双系统k380的配置",
+    url: "http://yoursite.com/2019/07/12/JZOF02-Singleton/", 
+    sourceId: "JZOF02-Singleton",
     productKey: "true",
     target: "cloud-tie-wrapper"
   };
