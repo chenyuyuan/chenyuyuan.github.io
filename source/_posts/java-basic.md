@@ -1,10 +1,8 @@
----
-title: java basic point
-date: 2019-07-10 20:53:38
+title: java basic
 tags: Java
 categories: Java
+date: 2019-07-10 20:53:38
 ---
-
 ### How Java Run?
 
 source code -> using Java compiler ->compile the source code to byte code(.class file) 
@@ -21,5 +19,4 @@ JVM: Java虚拟机, 虚拟用于执行字节码的虚拟计算机
 
 JRE: Java运行时环境，有JVM，库函数，运行Java运行时环境所必须的文件
 
-JDK: 有JRE+编译器和调试器，用于开发
-
+JDK: 有JRE+编译器和调试器，用于开发fdfds

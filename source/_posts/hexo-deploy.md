@@ -30,3 +30,4 @@ hexo部署方式参考https://www.zhihu.com/question/21193762 CrazyMilk的方法
 
 1. git clone git@github.com:chenyuyuan/chenyuyuan.github.io.git (默认分支是hexo)
 2. 在chenyuyuan.github.io目录下执行npm install hexo, npm install, npm install hexo-deployer-git
+3. 插件安装: npm install --save hexo-admin
