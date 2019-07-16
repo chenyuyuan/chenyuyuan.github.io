@@ -4,8 +4,6 @@ date: 2019-07-16 12:16:44
 tags: leetcode
 ---
 
-### leetcode 1114. print in order
-
 https://leetcode.com/problems/print-in-order/
 
 description

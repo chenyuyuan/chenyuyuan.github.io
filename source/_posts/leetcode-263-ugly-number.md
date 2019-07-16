@@ -5,8 +5,6 @@ tags: leetcode
 
 ---
 
-### leetcode 263. ugly number
-
 description:
 
 Write a program to check whether a given number is an ugly number.

@@ -4,8 +4,6 @@ date: 2019-07-16 00:09:05
 tags: leetcode
 ---
 
-### leetcode 48. Rotate Image
-
 https://leetcode.com/problems/rotate-image/
 
 description: 
