@@ -1,6 +1,9 @@
+---
 title: java basic
 tags: Java
 categories: Java
+---
+
 date: 2019-07-10 20:53:38
 ---
 ### How Java Run?
