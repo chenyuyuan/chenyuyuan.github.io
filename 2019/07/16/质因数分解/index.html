@@ -6,20 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>my first blog | Hexo</title>
+  <title>质因数分解 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="First BlogThis is my first blog.">
-<meta name="keywords" content="other">
+  <meta name="description" content="质因数分解：将一个数分解为多个质数相乘的形式，如10 = 2*5，9 = 3*3这样的形式。 solution:  使用多个i(属于2…n)来分解这个数 code: (java solution) 1234567891011121314private static String solution(int n) &amp;#123;    StringBuilder sb = new StringBuild">
 <meta property="og:type" content="article">
-<meta property="og:title" content="my first blog">
-<meta property="og:url" content="http://yoursite.com/2019/06/07/my-first-blog/index.html">
+<meta property="og:title" content="质因数分解">
+<meta property="og:url" content="http://yoursite.com/2019/07/16/质因数分解/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="First BlogThis is my first blog.">
+<meta property="og:description" content="质因数分解：将一个数分解为多个质数相乘的形式，如10 = 2*5，9 = 3*3这样的形式。 solution:  使用多个i(属于2…n)来分解这个数 code: (java solution) 1234567891011121314private static String solution(int n) &amp;#123;    StringBuilder sb = new StringBuild">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-13T11:02:24.572Z">
+<meta property="og:updated_time" content="2019-07-16T12:23:31.108Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="my first blog">
-<meta name="twitter:description" content="First BlogThis is my first blog.">
+<meta name="twitter:title" content="质因数分解">
+<meta name="twitter:description" content="质因数分解：将一个数分解为多个质数相乘的形式，如10 = 2*5，9 = 3*3这样的形式。 solution:  使用多个i(属于2…n)来分解这个数 code: (java solution) 1234567891011121314private static String solution(int n) &amp;#123;    StringBuilder sb = new StringBuild">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -155,33 +154,31 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-my-first-blog" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-质因数分解" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      my first blog
+      质因数分解
     </h1>
   
 
         
-        <a href="/2019/06/07/my-first-blog/" class="archive-article-date">
-  	<time datetime="2019-06-07T13:55:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-07</time>
+        <a href="/2019/07/16/质因数分解/" class="archive-article-date">
+  	<time datetime="2019-07-16T11:49:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-16</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="First-Blog"><a href="#First-Blog" class="headerlink" title="First Blog"></a>First Blog</h2><p>This is my first blog. </p>
-<a id="more"></a>
-
-
-
-
-
+        <p>质因数分解：将一个数分解为多个质数相乘的形式，如<code>10 = 2*5</code>，<code>9 = 3*3</code>这样的形式。</p>
+<p>solution: </p>
+<p>使用多个i(属于2…n)来分解这个数</p>
+<p>code: (java solution)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> String <span class="title">solution</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    StringBuilder sb = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">    sb.append(n+<span class="string">" = "</span>);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">2</span>;i &lt;= n;)&#123;</span><br><span class="line">        <span class="keyword">if</span>(n%i == <span class="number">0</span>) &#123;</span><br><span class="line">            sb.append(i+<span class="string">"*"</span>);</span><br><span class="line">            n = n/i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            i++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> sb.deleteCharAt(sb.length()-<span class="number">1</span>).toString();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
 
       
@@ -210,18 +207,18 @@
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">other</a>
+        			<a href="/categories/algorithm//" class="article-tag-list-link color5">algorithm</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
 
       
 
@@ -271,7 +268,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/06/07/my-first-blog/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/16/质因数分解/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -285,18 +282,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/07/10/hexo-deploy/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          hexo deploy
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/06/07/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2019/07/16/leetcode-263-ugly-number/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">leetcode-263-ugly-number</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -327,8 +315,8 @@
   <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
 <script>
   var cloudTieConfig = {
-    url: "http://yoursite.com/2019/06/07/my-first-blog/", 
-    sourceId: "my-first-blog",
+    url: "http://yoursite.com/2019/07/16/质因数分解/", 
+    sourceId: "质因数分解",
     productKey: "true",
     target: "cloud-tie-wrapper"
   };

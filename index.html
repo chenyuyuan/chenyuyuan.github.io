@@ -152,6 +152,83 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-质因数分解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/16/质因数分解/">质因数分解</a>
+    </h1>
+  
+
+        
+        <a href="/2019/07/16/质因数分解/" class="archive-article-date">
+  	<time datetime="2019-07-16T11:49:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>质因数分解：将一个数分解为多个质数相乘的形式，如<code>10 = 2*5</code>，<code>9 = 3*3</code>这样的形式。</p>
+<p>solution: </p>
+<p>使用多个i(属于2…n)来分解这个数</p>
+<p>code: (java solution)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> String <span class="title">solution</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    StringBuilder sb = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">    sb.append(n+<span class="string">" = "</span>);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">2</span>;i &lt;= n;)&#123;</span><br><span class="line">        <span class="keyword">if</span>(n%i == <span class="number">0</span>) &#123;</span><br><span class="line">            sb.append(i+<span class="string">"*"</span>);</span><br><span class="line">            n = n/i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            i++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> sb.deleteCharAt(sb.length()-<span class="number">1</span>).toString();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/algorithm//" class="article-tag-list-link color5">algorithm</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/07/16/质因数分解/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-leetcode-263-ugly-number" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -172,7 +249,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="leetcode-263-ugly-number"><a href="#leetcode-263-ugly-number" class="headerlink" title="leetcode 263. ugly number"></a>leetcode 263. ugly number</h3><p>description:</p>
+        <p>description:</p>
 <p>Write a program to check whether a given number is an ugly number.</p>
 <p>Ugly numbers are <strong>positive numbers</strong> whose prime factors only include <code>2, 3, 5</code>.</p>
 <p><strong>Example 1:</strong></p>
@@ -252,7 +329,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="leetcode-1114-print-in-order"><a href="#leetcode-1114-print-in-order" class="headerlink" title="leetcode 1114. print in order"></a>leetcode 1114. print in order</h3><p><a href="https://leetcode.com/problems/print-in-order/" target="_blank" rel="noopener">https://leetcode.com/problems/print-in-order/</a></p>
+        <p><a href="https://leetcode.com/problems/print-in-order/" target="_blank" rel="noopener">https://leetcode.com/problems/print-in-order/</a></p>
 <p>description</p>
 <p>Suppose we have a class:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public class Foo &#123;</span><br><span class="line">  public void first() &#123; print(&quot;first&quot;); &#125;</span><br><span class="line">  public void second() &#123; print(&quot;second&quot;); &#125;</span><br><span class="line">  public void third() &#123; print(&quot;third&quot;); &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -333,7 +410,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="leetcode-48-Rotate-Image"><a href="#leetcode-48-Rotate-Image" class="headerlink" title="leetcode 48. Rotate Image"></a>leetcode 48. Rotate Image</h3><p><a href="https://leetcode.com/problems/rotate-image/" target="_blank" rel="noopener">https://leetcode.com/problems/rotate-image/</a></p>
+        <p><a href="https://leetcode.com/problems/rotate-image/" target="_blank" rel="noopener">https://leetcode.com/problems/rotate-image/</a></p>
 <p>description: </p>
 <p>You are given an <em>n</em> x <em>n</em> 2D matrix representing an image.</p>
 <p>Rotate the image by 90 degrees (clockwise).</p>
@@ -883,71 +960,10 @@
 
 
   
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/06/07/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2019/06/07/hello-world/" class="archive-article-date">
-  	<time datetime="2019-06-06T16:34:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-        
-          <a class="article-more-a" href="/2019/06/07/hello-world/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/06/07/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 
 
@@ -1056,15 +1072,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">leetcode</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
