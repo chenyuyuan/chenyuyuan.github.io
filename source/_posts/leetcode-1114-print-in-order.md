@@ -10,7 +10,7 @@ description
 
 Suppose we have a class:
 
-```
+```java
 public class Foo {
   public void first() { print("first"); }
   public void second() { print("second"); }
@@ -78,7 +78,7 @@ my solution:
 
 use a flag
 
-code: (java solution)
+code in java: 
 
 ```java
 class Foo {
