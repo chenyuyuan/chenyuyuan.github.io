@@ -28,6 +28,8 @@ class FooBar {
 
 The same instance of `FooBar` will be passed to two different threads. Thread A will call `foo()` while thread B will call `bar()`. Modify the given program to output "foobar" *n* times.
 
+<!-- more -->
+
 Example:
 
 ```
