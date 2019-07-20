@@ -79,7 +79,7 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:chenyuyuan/chenyuyuan.github.io.git
+  repo: https://chenyuyuan:cyy3309732@github.com/chenyuyuan/chenyuyuan.github.io.git
 branch: master
 
 #yilia
