@@ -310,7 +310,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/25/spto-5-replace-space/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/25/spto-06-print-list-reversingly/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Cyuyuan15">
@@ -330,7 +330,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/07/25/spto-5-replace-space/" class="post-title-link" itemprop="url">spto-05-replace-space</a>
+                <a href="/2019/07/25/spto-06-print-list-reversingly/" class="post-title-link" itemprop="url">spto-06-print-list-reversingly</a>
               
             
           </h1>
@@ -355,7 +355,7 @@
                 
               
 
-              <time title="Created: 2019-07-25 17:28:30 / Modified: 17:53:30" itemprop="dateCreated datePublished" datetime="2019-07-25T17:28:30+08:00">2019-07-25</time>
+              <time title="Created: 2019-07-25 19:47:27 / Modified: 20:05:53" itemprop="dateCreated datePublished" datetime="2019-07-25T19:47:27+08:00">2019-07-25</time>
             </span>
           
 
@@ -401,14 +401,12 @@
       
         
           
-            <h3 id="面试题5：替换空格"><a href="#面试题5：替换空格" class="headerlink" title="面试题5：替换空格"></a>面试题5：替换空格</h3><h5 id="题目"><a href="#题目" class="headerlink" title="题目:"></a>题目:</h5><p>请实现一个函数，把字符串中的每个空格替换成”%20”。例如，输入”We are happy”，则输入”We%20are%20happy”</p>
-<h5 id="solution"><a href="#solution" class="headerlink" title="solution:"></a>solution:</h5><p>书中的有个条件是输入的字符串数组后面有足够的空间可以移动</p>
-<p>方法是从后往前扫描，将字符串的字符一个个往后移动，若是遇到空格则增加</p>
-<p>We are happy</p>
-<p>​                      👆i</p>
-<p>We%20are%20happy</p>
-<p>​                                   👆j</p>
-<h5 id="code-in-java"><a href="#code-in-java" class="headerlink" title="code in java:"></a>code in java:</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">question05</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">char</span>[] replaceSpace(<span class="keyword">char</span>[] s, <span class="keyword">int</span> length) &#123;</span><br><span class="line">        <span class="keyword">int</span> spaceCount = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">char</span> c : s) &#123;</span><br><span class="line">            <span class="keyword">if</span> (c == <span class="string">' '</span>) &#123;</span><br><span class="line">                spaceCount++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(spaceCount == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> s;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> j = length + <span class="number">2</span> * spaceCount - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> i = length - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(i &gt;= <span class="number">0</span> &amp;&amp; i &lt; j) &#123;</span><br><span class="line">            <span class="keyword">if</span>(s[i] == <span class="string">' '</span>) &#123;</span><br><span class="line">                s[j] = <span class="string">'0'</span>;</span><br><span class="line">                s[j - <span class="number">1</span>] = <span class="string">'2'</span>;</span><br><span class="line">                s[j - <span class="number">2</span>] = <span class="string">'%'</span>;</span><br><span class="line">                j = j - <span class="number">3</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> &#123;</span><br><span class="line">                s[j] = s[i];</span><br><span class="line">                j--;</span><br><span class="line">            &#125;</span><br><span class="line">            i--;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> s;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">char</span>[] string = <span class="keyword">new</span> <span class="keyword">char</span>[<span class="number">50</span>];</span><br><span class="line">        string[<span class="number">0</span>] = <span class="string">'W'</span>;string[<span class="number">1</span>] = <span class="string">'e'</span>;string[<span class="number">2</span>] = <span class="string">' '</span>;</span><br><span class="line">        string[<span class="number">3</span>] = <span class="string">'a'</span>;string[<span class="number">4</span>] = <span class="string">'r'</span>;string[<span class="number">5</span>] = <span class="string">'e'</span>;string[<span class="number">6</span>] = <span class="string">' '</span>;</span><br><span class="line">        string[<span class="number">7</span>] = <span class="string">'h'</span>;string[<span class="number">8</span>] = <span class="string">'a'</span>;string[<span class="number">9</span>] = <span class="string">'p'</span>;string[<span class="number">10</span>] = <span class="string">'p'</span>;string[<span class="number">11</span>] = <span class="string">'y'</span>;</span><br><span class="line">        System.out.println(replaceSpace(string,<span class="number">12</span>));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <h3 id="面试题6"><a href="#面试题6" class="headerlink" title="面试题6:"></a>面试题6:</h3><h5 id="题目"><a href="#题目" class="headerlink" title="题目:"></a>题目:</h5><p>输入一个链表的头节点，从头到尾反过来打印出每个节点的值，链表节点的定义如下: </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ListNode</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> val;</span><br><span class="line">    <span class="keyword">public</span> ListNode next;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">ListNode</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123; val = x; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="solution"><a href="#solution" class="headerlink" title="solution:"></a>solution:</h5><p>可以使用递归的方法，但是当链表很长的时候，可能会导致函数调用栈溢出。</p>
+<p>也可以使用栈基于循环实现的代码，显然这种方法鲁棒性更好。</p>
+<h5 id="code-in-java"><a href="#code-in-java" class="headerlink" title="code in java:"></a>code in java:</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">question06</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span> <span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        ListNode p1 = <span class="keyword">new</span> ListNode(<span class="number">1</span>);</span><br><span class="line">        ListNode p2 = <span class="keyword">new</span> ListNode(<span class="number">2</span>);</span><br><span class="line">        ListNode p3 = <span class="keyword">new</span> ListNode(<span class="number">3</span>);</span><br><span class="line">        p1.next = p2;</span><br><span class="line">        p2.next = p3;</span><br><span class="line">        System.out.println(<span class="string">"printListReversingly_Iterativity() is below: "</span>);</span><br><span class="line">        printListReversingly_Recursively(p1);</span><br><span class="line">        System.out.println(<span class="string">"printListReversingly_Recursively() is below: "</span>);</span><br><span class="line">        printListReversingly_Recursively(p1);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">printListReversingly_Iterativity</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">        Stack&lt;ListNode&gt; stack = <span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line">        ListNode p = head;</span><br><span class="line">        <span class="keyword">while</span> (p != <span class="keyword">null</span>) &#123;</span><br><span class="line">            stack.push(p);</span><br><span class="line">            p=p.next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span> (!stack.isEmpty()) &#123;</span><br><span class="line">            System.out.print(stack.pop().val + <span class="string">" "</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">printListReversingly_Recursively</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(head != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span>(head.next != <span class="keyword">null</span>) &#123;</span><br><span class="line">                printListReversingly_Recursively(head.next);</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println(head.val + <span class="string">" "</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
           
@@ -513,10 +511,14 @@
                 
               
 
-              <time title="Created: 2019-07-25 17:28:30" itemprop="dateCreated datePublished" datetime="2019-07-25T17:28:30+08:00">2019-07-25</time>
+              <time title="Created: 2019-07-25 17:28:30 / Modified: 19:19:37" itemprop="dateCreated datePublished" datetime="2019-07-25T17:28:30+08:00">2019-07-25</time>
             </span>
           
 
+          
+            
+
+            
           
 
           
@@ -554,9 +556,16 @@
 
       
         
+          <h3 id="面试题5：替换空格"><a href="#面试题5：替换空格" class="headerlink" title="面试题5：替换空格"></a>面试题5：替换空格</h3><h5 id="题目"><a href="#题目" class="headerlink" title="题目:"></a>题目:</h5><p>请实现一个函数，把字符串中的每个空格替换成”%20”。例如，输入”We are happy”，则输入”We%20are%20happy”</p>
+          <!--noindex-->
           
-            
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/07/25/spto-05-replace-space/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
           
+          <!--/noindex-->
         
       
     </div>
@@ -658,13 +667,23 @@
                 
               
 
-              <time title="Created: 2019-07-22 11:23:19 / Modified: 14:21:46" itemprop="dateCreated datePublished" datetime="2019-07-22T11:23:19+08:00">2019-07-22</time>
+              <time title="Created: 2019-07-22 11:23:19" itemprop="dateCreated datePublished" datetime="2019-07-22T11:23:19+08:00">2019-07-22</time>
             </span>
           
 
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-07-25 19:19:17" itemprop="dateModified" datetime="2019-07-25T19:19:17+08:00">2019-07-25</time>
+              </span>
             
           
 
@@ -703,13 +722,17 @@
 
       
         
-          
-            <p>题目一：找出数组中重复的数字</p>
+          <p>题目一：找出数组中重复的数字</p>
 <p>在一个长度为n的数组里的所有数字都在0~n-1的范围内。数组中某些数字是重复的，但不知道有几个数字是重复的，也不知道每个数字重复了几次，请找出数组里任意一个重复的数字。</p>
-<h5 id="code-in-java"><a href="#code-in-java" class="headerlink" title="code in java:"></a>code in java:</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">question03</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> ArrayList&lt;Integer&gt; <span class="title">duplicate</span><span class="params">(<span class="keyword">int</span>[] numbers)</span> </span>&#123;</span><br><span class="line">        ArrayList&lt;Integer&gt; ans = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">if</span> (numbers == <span class="keyword">null</span> || numbers.length == <span class="number">0</span>) &#123;</span><br><span class="line">            System.out.print(<span class="string">"is null"</span>);</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; numbers.length;++i) &#123;</span><br><span class="line">            <span class="keyword">if</span>(numbers[i] &lt; <span class="number">0</span> || numbers[i] &gt; numbers.length) &#123;</span><br><span class="line">                System.out.print(<span class="string">"get over"</span>);</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; numbers.length;++i) &#123;</span><br><span class="line">            <span class="keyword">while</span> (numbers[i] != i) &#123;</span><br><span class="line">                <span class="keyword">if</span> (numbers[i] == numbers[numbers[i]]) &#123;</span><br><span class="line">                    <span class="keyword">if</span>(!ans.contains(numbers[i]))</span><br><span class="line">                        ans.add(numbers[i]);</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">int</span> temp = numbers[i];</span><br><span class="line">                numbers[i] = numbers[temp];</span><br><span class="line">                numbers[temp] = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] list = &#123;<span class="number">2</span>, <span class="number">3</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">2</span>, <span class="number">5</span>, <span class="number">3</span>,<span class="number">1</span>,<span class="number">1</span>&#125;;</span><br><span class="line">        ArrayList&lt;Integer&gt; al = duplicate(list);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i : al) &#123;</span><br><span class="line">            System.out.print(i+ <span class="string">" "</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/07/22/spto-03-duplicate-number-at-an-array/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
