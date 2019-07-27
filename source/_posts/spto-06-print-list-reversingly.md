@@ -18,6 +18,8 @@ public class ListNode {
 }
 ```
 
+<!-- more -->
+
 ##### solution: 
 
 可以使用递归的方法，但是当链表很长的时候，可能会导致函数调用栈溢出。
