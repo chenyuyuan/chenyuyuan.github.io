@@ -1,7 +1,7 @@
 ---
 title: leetcode-155-minstack
 date: 2019-07-30 00:34:57
-tags: algorithm
+tags: [algorithm, leetcode]
 ---
 
 https://leetcode.com/problems/min-stack/
