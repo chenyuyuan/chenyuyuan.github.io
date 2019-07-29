@@ -93,18 +93,18 @@
   };
 </script>
 
-  <meta name="description" content="Command 删除文件夹: rm -rf [dictionary_name]    -r 选项表示向👇递归，删除文件夹👇所有文件    -f 表示强制删除">
-<meta name="keywords" content="Linux">
+  <meta name="description" content="https://leetcode.com/problems/min-stack/ description:Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.  push(x) – Push element x onto stack. pop() – Rem">
+<meta name="keywords" content="algorithm">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux常用命令">
-<meta property="og:url" content="http://yoursite.com/2019/07/12/Linux常用命令/index.html">
+<meta property="og:title" content="leetcode-155-minstack">
+<meta property="og:url" content="http://yoursite.com/2019/07/30/leetcode-155-minstack/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Command 删除文件夹: rm -rf [dictionary_name]    -r 选项表示向👇递归，删除文件夹👇所有文件    -f 表示强制删除">
+<meta property="og:description" content="https://leetcode.com/problems/min-stack/ description:Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.  push(x) – Push element x onto stack. pop() – Rem">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-07-13T11:01:56.131Z">
+<meta property="og:updated_time" content="2019-07-29T16:47:33.893Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux常用命令">
-<meta name="twitter:description" content="Command 删除文件夹: rm -rf [dictionary_name]    -r 选项表示向👇递归，删除文件夹👇所有文件    -f 表示强制删除">
+<meta name="twitter:title" content="leetcode-155-minstack">
+<meta name="twitter:description" content="https://leetcode.com/problems/min-stack/ description:Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.  push(x) – Push element x onto stack. pop() – Rem">
 
 
 
@@ -112,7 +112,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/07/12/Linux常用命令/">
+  <link rel="canonical" href="http://yoursite.com/2019/07/30/leetcode-155-minstack/">
 
 
 
@@ -123,7 +123,7 @@
 </script>
 
   
-  <title>Linux常用命令 | Hexo</title>
+  <title>leetcode-155-minstack | Hexo</title>
   
 
 
@@ -314,7 +314,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/12/Linux常用命令/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/30/leetcode-155-minstack/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Cyuyuan15">
@@ -331,7 +331,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Linux常用命令
+          <h1 class="post-title" itemprop="name headline">leetcode-155-minstack
 
               
             
@@ -357,23 +357,13 @@
                 
               
 
-              <time title="Created: 2019-07-12 12:14:20" itemprop="dateCreated datePublished" datetime="2019-07-12T12:14:20+08:00">2019-07-12</time>
+              <time title="Created: 2019-07-30 00:34:57 / Modified: 00:47:33" itemprop="dateCreated datePublished" datetime="2019-07-30T00:34:57+08:00">2019-07-30</time>
             </span>
           
 
           
             
 
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-07-13 19:01:56" itemprop="dateModified" datetime="2019-07-13T19:01:56+08:00">2019-07-13</time>
-              </span>
             
           
 
@@ -419,10 +409,22 @@
       
 
       
-        <h3 id="Command"><a href="#Command" class="headerlink" title="Command"></a>Command</h3><ol>
-<li>删除文件夹: rm -rf [dictionary_name]    -r 选项表示向👇递归，删除文件夹👇所有文件    -f 表示强制删除<a id="more"></a></li>
-<li>切换用户到root: sudo -s, 切换到su: sudo su</li>
-</ol>
+        <p><a href="https://leetcode.com/problems/min-stack/" target="_blank" rel="noopener">https://leetcode.com/problems/min-stack/</a></p>
+<h5 id="description"><a href="#description" class="headerlink" title="description:"></a>description:</h5><p>Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.</p>
+<ul>
+<li>push(x) – Push element x onto stack.</li>
+<li>pop() – Removes the element on top of the stack.</li>
+<li>top() – Get the top element.</li>
+<li>getMin() – Retrieve the minimum element in the stack.</li>
+</ul>
+<p>Example:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">MinStack minStack = new MinStack();</span><br><span class="line">minStack.push(-2);</span><br><span class="line">minStack.push(0);</span><br><span class="line">minStack.push(-3);</span><br><span class="line">minStack.getMin();   --&gt; Returns -3.</span><br><span class="line">minStack.pop();</span><br><span class="line">minStack.top();      --&gt; Returns 0.</span><br><span class="line">minStack.getMin();   --&gt; Returns -2.</span><br></pre></td></tr></table></figure>
+
+<p>和栈一样，但同时要求获取栈内最小值时使用O(1)的时间复杂度</p>
+<h5 id="solution"><a href="#solution" class="headerlink" title="solution:"></a>solution:</h5><p>在push时，每次得到比最小值还小的数时，将原来的最小值也一起push到stack里</p>
+<p>在pop时，若是即将pop最小值，则pop时把原来的最小值恢复</p>
+<h5 id="code-in-java"><a href="#code-in-java" class="headerlink" title="code in java:"></a>code in java:</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MinStack</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> min=Integer.MAX_VALUE;</span><br><span class="line">    Stack&lt;Integer&gt; stack=<span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/** initialize your data structure here. */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">push</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(x&lt;=min)&#123;</span><br><span class="line">            stack.push(min);</span><br><span class="line">            min=x;</span><br><span class="line">        &#125;</span><br><span class="line">        stack.push(x);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">pop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(stack.pop() == min) min=stack.pop();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">top</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> stack.peek();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getMin</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(!stack.isEmpty())</span><br><span class="line">            <span class="keyword">return</span> min;</span><br><span class="line">        <span class="keyword">else</span> <span class="comment">// 栈为空</span></span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
@@ -453,7 +455,7 @@
         
         <div class="post-tags">
           
-            <a href="/tags/Linux/" rel="tag"># Linux</a>
+            <a href="/tags/algorithm/" rel="tag"># algorithm</a>
           
         </div>
       
@@ -466,8 +468,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/10/win10和ubuntu双系统k380的配置/" rel="next" title="win10和ubuntu双系统k380的配置">
-                <i class="fa fa-chevron-left"></i> win10和ubuntu双系统k380的配置
+              <a href="/2019/07/26/Binary-tree-treversal/" rel="next" title="Binary-tree-treversal">
+                <i class="fa fa-chevron-left"></i> Binary-tree-treversal
               </a>
             
           </div>
@@ -475,10 +477,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/07/12/java-basic/" rel="prev" title="java basic">
-                java basic <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -637,7 +635,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Command"><span class="nav-number">1.</span> <span class="nav-text">Command</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#description"><span class="nav-number">1.</span> <span class="nav-text">description:</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#solution"><span class="nav-number">2.</span> <span class="nav-text">solution:</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#code-in-java"><span class="nav-number">3.</span> <span class="nav-text">code in java:</span></a></li></ol></div>
             
 
           </div>
