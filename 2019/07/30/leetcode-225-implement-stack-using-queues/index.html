@@ -93,18 +93,18 @@
   };
 </script>
 
-  <meta name="description" content="https://leetcode.com/problems/rotate-image/ description:  You are given an n x n 2D matrix representing an image. Rotate the image by 90 degrees (clockwise).">
+  <meta name="description" content="https://leetcode.com/problems/implement-stack-using-queues/ code in java:123456789101112131415161718192021222324252627282930313233class MyStack &amp;#123;    public LinkedList&amp;lt;Integer&amp;gt; queue;    /**">
 <meta name="keywords" content="leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode-48-rotate-image">
-<meta property="og:url" content="http://yoursite.com/2019/07/16/leetcode-48-rotate-image/index.html">
+<meta property="og:title" content="leetcode-225-implement-stack-using-queues">
+<meta property="og:url" content="http://yoursite.com/2019/07/30/leetcode-225-implement-stack-using-queues/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="https://leetcode.com/problems/rotate-image/ description:  You are given an n x n 2D matrix representing an image. Rotate the image by 90 degrees (clockwise).">
+<meta property="og:description" content="https://leetcode.com/problems/implement-stack-using-queues/ code in java:123456789101112131415161718192021222324252627282930313233class MyStack &amp;#123;    public LinkedList&amp;lt;Integer&amp;gt; queue;    /**">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-07-16T11:19:47.646Z">
+<meta property="og:updated_time" content="2019-07-30T05:15:10.273Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode-48-rotate-image">
-<meta name="twitter:description" content="https://leetcode.com/problems/rotate-image/ description:  You are given an n x n 2D matrix representing an image. Rotate the image by 90 degrees (clockwise).">
+<meta name="twitter:title" content="leetcode-225-implement-stack-using-queues">
+<meta name="twitter:description" content="https://leetcode.com/problems/implement-stack-using-queues/ code in java:123456789101112131415161718192021222324252627282930313233class MyStack &amp;#123;    public LinkedList&amp;lt;Integer&amp;gt; queue;    /**">
 
 
 
@@ -112,7 +112,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/07/16/leetcode-48-rotate-image/">
+  <link rel="canonical" href="http://yoursite.com/2019/07/30/leetcode-225-implement-stack-using-queues/">
 
 
 
@@ -123,7 +123,7 @@
 </script>
 
   
-  <title>leetcode-48-rotate-image | Hexo</title>
+  <title>leetcode-225-implement-stack-using-queues | Hexo</title>
   
 
 
@@ -314,7 +314,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/16/leetcode-48-rotate-image/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/30/leetcode-225-implement-stack-using-queues/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Cyuyuan15">
@@ -331,7 +331,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">leetcode-48-rotate-image
+          <h1 class="post-title" itemprop="name headline">leetcode-225-implement-stack-using-queues
 
               
             
@@ -357,7 +357,7 @@
                 
               
 
-              <time title="Created: 2019-07-16 00:09:05 / Modified: 19:19:47" itemprop="dateCreated datePublished" datetime="2019-07-16T00:09:05+08:00">2019-07-16</time>
+              <time title="Created: 2019-07-30 13:14:03 / Modified: 13:15:10" itemprop="dateCreated datePublished" datetime="2019-07-30T13:14:03+08:00">2019-07-30</time>
             </span>
           
 
@@ -409,28 +409,8 @@
       
 
       
-        <p><a href="https://leetcode.com/problems/rotate-image/" target="_blank" rel="noopener">https://leetcode.com/problems/rotate-image/</a></p>
-<p>description: </p>
-<p>You are given an <em>n</em> x <em>n</em> 2D matrix representing an image.</p>
-<p>Rotate the image by 90 degrees (clockwise).</p>
-<a id="more"></a>
-
-<p><strong>Note:</strong></p>
-<p>You have to rotate the image <a href="https://en.wikipedia.org/wiki/In-place_algorithm" target="_blank" rel="noopener"><strong>in-place</strong></a>, which means you have to modify the input 2D matrix directly. <strong>DO NOT</strong>allocate another 2D matrix and do the rotation.</p>
-<p><strong>Example 1:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Given input matrix = </span><br><span class="line">[</span><br><span class="line">  [1,2,3],</span><br><span class="line">  [4,5,6],</span><br><span class="line">  [7,8,9]</span><br><span class="line">],</span><br><span class="line">rotate the input matrix in-place such that it becomes:</span><br><span class="line">[</span><br><span class="line">  [7,4,1],</span><br><span class="line">  [8,5,2],</span><br><span class="line">  [9,6,3]</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
-
-<p>solve: </p>
-<ul>
-<li><p>矩阵顺时针旋转90°，需要将矩阵次对角线两侧的元素交换，再将矩阵上下对换，（两步顺序可以交换），</p>
-<p>即，将<code>a[i][j]</code> 和<code>a[n-j][n-i]</code>的元素对换，再将<code>a[i][j]</code>和<code>a[n-i][j]</code>的元素对换i, j属于[1…n]；</p>
-</li>
-<li><p>若是逆时针旋转90°，则是将矩阵主对角线两侧的元素交换，再将矩阵上下对换，（两步顺序可以交换），</p>
-<p>即，将<code>a[i][j]</code> 和<code>a[j][i]</code>的元素对换，再将<code>a[i][j]</code>和<code>a[n-i][j]</code>的元素对换i, j属于[1…n]；</p>
-</li>
-</ul>
-<p>code: (java solution)</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">rotate</span><span class="params">(<span class="keyword">int</span>[][] matrix)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n = matrix.length;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; n;++i) &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>;j &lt; n -i;++j) &#123;</span><br><span class="line">                <span class="keyword">int</span> temp = matrix[i][j];</span><br><span class="line">                matrix[i][j] = matrix[n-<span class="number">1</span>-j][n-<span class="number">1</span>-i];</span><br><span class="line">                matrix[n-<span class="number">1</span>-j][n-<span class="number">1</span>-i] = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; n / <span class="number">2</span>;++i) &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>;j &lt; n;++j) &#123;</span><br><span class="line">                <span class="keyword">int</span> temp = matrix[i][j];</span><br><span class="line">                matrix[i][j] = matrix[n-<span class="number">1</span>-i][j];</span><br><span class="line">                matrix[n-<span class="number">1</span>-i][j] = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p><a href="https://leetcode.com/problems/implement-stack-using-queues/" target="_blank" rel="noopener">https://leetcode.com/problems/implement-stack-using-queues/</a></p>
+<h5 id="code-in-java"><a href="#code-in-java" class="headerlink" title="code in java:"></a>code in java:</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyStack</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> LinkedList&lt;Integer&gt; queue;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/** Initialize your data structure here. */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MyStack</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.queue = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/** Push element x onto stack. */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">push</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">        queue.add(x);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; queue.size() - <span class="number">1</span>;i++) &#123;</span><br><span class="line">            queue.add(queue.poll());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/** Removes the element on top of the stack and returns that element. */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">pop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> queue.poll();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/** Get the top element. */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">top</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> queue.peek();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/** Returns whether the stack is empty. */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">empty</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> queue.isEmpty();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
       
@@ -475,8 +455,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/12/spto-02-Singleton/" rel="next" title="spto-02 Singleton">
-                <i class="fa fa-chevron-left"></i> spto-02 Singleton
+              <a href="/2019/07/30/leetcode-232-implement-queue-using-stacks/" rel="next" title="leetcode-232-implement-queue-using-stacks">
+                <i class="fa fa-chevron-left"></i> leetcode-232-implement-queue-using-stacks
               </a>
             
           </div>
@@ -484,10 +464,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/07/16/leetcode-1114-print-in-order/" rel="prev" title="leetcode-1114-print-in-order">
-                leetcode-1114-print-in-order <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -531,8 +507,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
 
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -626,6 +611,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#code-in-java"><span class="nav-number">1.</span> <span class="nav-text">code in java:</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
