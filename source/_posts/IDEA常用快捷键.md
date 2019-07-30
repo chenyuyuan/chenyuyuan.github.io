@@ -11,3 +11,11 @@ tags: note
 2. 全局搜索：ctrl+alt+F
 
 3. 搜索文件：shift*3
+
+4. 查看类的继承图：ctrl+alt+U
+
+5. 查看当前类的继承树：ctrl+H
+
+6. 查看一个类中有什么方法：Alt+7 或 点左侧边栏Structure
+
+7. 切换文件：alt+<-, alt+->
