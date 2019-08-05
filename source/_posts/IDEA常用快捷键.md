@@ -20,4 +20,4 @@ tags: note
 
 7. 切换文件：alt+<-, alt+->
 
-![1564997317954](/images/idea快捷键.png)
+![1564997317954](/../../images/idea快捷键.png)
