@@ -8,7 +8,7 @@ tags: note
 
    将鼠标移到implement后面的类，按快捷键就会跳转到这个类的代码
 
-2. 全局搜索：ctrl+alt+F
+2. 全局搜索：ctrl+alt+F，这个快捷键和微软输入法的简体/繁体切换冲突了，可以改成ctrl+alt+Y(这个快捷键没被用到)
 
 3. 搜索文件：shift*3
 
@@ -19,3 +19,5 @@ tags: note
 6. 查看一个类中有什么方法：Alt+7 或 点左侧边栏Structure
 
 7. 切换文件：alt+<-, alt+->
+
+![1564997317954](\blogimages\1564997317954.png)
