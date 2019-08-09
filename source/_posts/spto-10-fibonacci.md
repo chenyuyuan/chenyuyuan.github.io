@@ -8,6 +8,8 @@ tags: spto
 
 求Fibonacci序列
 
+<!-- more -->
+
 ##### code in java:
 
 ```java

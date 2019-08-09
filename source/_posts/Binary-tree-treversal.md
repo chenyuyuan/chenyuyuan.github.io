@@ -30,6 +30,8 @@ public List<Integer> preorderTraversal(TreeNode root) {
 }
 ```
 
+<!-- more -->
+
 中序遍历(非递归): 
 
 ```java

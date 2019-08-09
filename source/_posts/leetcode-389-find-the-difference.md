@@ -28,6 +28,8 @@ Explanation:
 'e' is the letter that was added.
 ```
 
+<!-- more -->
+
 ##### solution:
 
 方法1 ：

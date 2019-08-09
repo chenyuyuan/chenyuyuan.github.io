@@ -8,6 +8,8 @@ tags: spto
 
 用两个栈实现一个队列。
 
+<!-- more -->
+
 ##### solution:
 
 https://chenyuyuan.github.io/2019/07/30/leetcode-232-implement-queue-using-stacks/

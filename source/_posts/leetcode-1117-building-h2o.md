@@ -19,7 +19,9 @@ We don’t have to worry about matching the threads up explicitly; that is, the 
 
 Write synchronization code for oxygen and hydrogen molecules that enforces these constraints.
 
-Example 1:
+<!-- more -->
+
+Example:
 
 ```
 Input: "HOH"
