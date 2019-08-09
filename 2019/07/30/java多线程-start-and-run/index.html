@@ -93,18 +93,18 @@
   };
 </script>
 
-  <meta name="description" content="start()方法和run()start() : 它的作用是启动一个新线程，新线程会执行相应的run()方法。start()不能被重复调用。run()   : run()就和普通的成员方法一样，可以被重复调用。单独调用run()的话，会在当前线程中执行run()，而并不会启动新线程！ start() 和 run()相关源码(基于JDK1.7.0_40)Thread.java中start()方法的源">
+  <meta name="description" content="start()方法和run()start() : 它的作用是启动一个新线程，新线程会执行相应的run()方法。start()不能被重复调用。run()   : run()就和普通的成员方法一样，可以被重复调用。单独调用run()的话，会在当前线程中执行run()，而并不会启动新线程！">
 <meta name="keywords" content="java多线程">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java多线程-start()-and-run()">
 <meta property="og:url" content="http://yoursite.com/2019/07/30/java多线程-start-and-run/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="start()方法和run()start() : 它的作用是启动一个新线程，新线程会执行相应的run()方法。start()不能被重复调用。run()   : run()就和普通的成员方法一样，可以被重复调用。单独调用run()的话，会在当前线程中执行run()，而并不会启动新线程！ start() 和 run()相关源码(基于JDK1.7.0_40)Thread.java中start()方法的源">
+<meta property="og:description" content="start()方法和run()start() : 它的作用是启动一个新线程，新线程会执行相应的run()方法。start()不能被重复调用。run()   : run()就和普通的成员方法一样，可以被重复调用。单独调用run()的话，会在当前线程中执行run()，而并不会启动新线程！">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-07-30T13:50:44.791Z">
+<meta property="og:updated_time" content="2019-08-05T15:00:04.892Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java多线程-start()-and-run()">
-<meta name="twitter:description" content="start()方法和run()start() : 它的作用是启动一个新线程，新线程会执行相应的run()方法。start()不能被重复调用。run()   : run()就和普通的成员方法一样，可以被重复调用。单独调用run()的话，会在当前线程中执行run()，而并不会启动新线程！ start() 和 run()相关源码(基于JDK1.7.0_40)Thread.java中start()方法的源">
+<meta name="twitter:description" content="start()方法和run()start() : 它的作用是启动一个新线程，新线程会执行相应的run()方法。start()不能被重复调用。run()   : run()就和普通的成员方法一样，可以被重复调用。单独调用run()的话，会在当前线程中执行run()，而并不会启动新线程！">
 
 
 
@@ -357,13 +357,23 @@
                 
               
 
-              <time title="Created: 2019-07-30 15:01:58 / Modified: 21:50:44" itemprop="dateCreated datePublished" datetime="2019-07-30T15:01:58+08:00">2019-07-30</time>
+              <time title="Created: 2019-07-30 15:01:58" itemprop="dateCreated datePublished" datetime="2019-07-30T15:01:58+08:00">2019-07-30</time>
             </span>
           
 
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-08-05 23:00:04" itemprop="dateModified" datetime="2019-08-05T23:00:04+08:00">2019-08-05</time>
+              </span>
             
           
 
@@ -410,6 +420,8 @@
 
       
         <h4 id="start-方法和run"><a href="#start-方法和run" class="headerlink" title="start()方法和run()"></a>start()方法和run()</h4><p><strong>start()</strong> : 它的作用是启动一个新线程，新线程会执行相应的run()方法。start()不能被重复调用。<br><strong>run()</strong>   : run()就和普通的成员方法一样，可以被重复调用。单独调用run()的话，会在当前线程中执行run()，而并不会启动新线程！</p>
+<a id="more"></a>
+
 <h5 id="start-和-run-相关源码-基于JDK1-7-0-40"><a href="#start-和-run-相关源码-基于JDK1-7-0-40" class="headerlink" title="start() 和 run()相关源码(基于JDK1.7.0_40)"></a>start() 和 run()相关源码(基于JDK1.7.0_40)</h5><p>Thread.java中start()方法的源码如下：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title">start</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 如果线程不是"就绪状态"，则抛出异常！</span></span><br><span class="line">    <span class="keyword">if</span> (threadStatus != <span class="number">0</span>)</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> IllegalThreadStateException();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 将线程添加到ThreadGroup中</span></span><br><span class="line">    group.add(<span class="keyword">this</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">boolean</span> started = <span class="keyword">false</span>;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="comment">// 通过start0()启动线程</span></span><br><span class="line">        start0();</span><br><span class="line">        <span class="comment">// 设置started标记</span></span><br><span class="line">        started = <span class="keyword">true</span>;</span><br><span class="line">    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (!started) &#123;</span><br><span class="line">                group.threadStartFailed(<span class="keyword">this</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Throwable ignore) &#123;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -547,7 +559,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">28</span>
+          <span class="site-state-item-count">30</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -605,7 +617,9 @@
         
           
         
-        <span class="site-state-item-count">13</span>
+          
+        
+        <span class="site-state-item-count">14</span>
         <span class="site-state-item-name">tags</span>
         
       </div>

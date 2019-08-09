@@ -93,13 +93,18 @@
   };
 </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/tags/Ubuntu/index.html">
+  <meta name="description" content="使用BufferReader记得flush()刷新缓存区，BufferedWriter是缓冲输入流，意思是调用BufferedWriter的write方法时候。数据是先写入到缓冲区里，并没有直接写入到目的文件里。必须调用BufferedWriter的flush()方法。这个方法会刷新一下该缓冲流，也就是会把数据写入到目的文件里。或者你可以调用BufferedWriter的close()方法，该方法">
+<meta name="keywords" content="Java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java-IO">
+<meta property="og:url" content="http://yoursite.com/2019/08/05/Java-IO/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="使用BufferReader记得flush()刷新缓存区，BufferedWriter是缓冲输入流，意思是调用BufferedWriter的write方法时候。数据是先写入到缓冲区里，并没有直接写入到目的文件里。必须调用BufferedWriter的flush()方法。这个方法会刷新一下该缓冲流，也就是会把数据写入到目的文件里。或者你可以调用BufferedWriter的close()方法，该方法">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-08-05T15:43:50.988Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="Java-IO">
+<meta name="twitter:description" content="使用BufferReader记得flush()刷新缓存区，BufferedWriter是缓冲输入流，意思是调用BufferedWriter的write方法时候。数据是先写入到缓冲区里，并没有直接写入到目的文件里。必须调用BufferedWriter的flush()方法。这个方法会刷新一下该缓冲流，也就是会把数据写入到目的文件里。或者你可以调用BufferedWriter的close()方法，该方法">
 
 
 
@@ -107,7 +112,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/tags/Ubuntu/">
+  <link rel="canonical" href="http://yoursite.com/2019/08/05/Java-IO/">
 
 
 
@@ -118,7 +123,7 @@
 </script>
 
   
-  <title>Tag: Ubuntu | Hexo</title>
+  <title>Java-IO | Hexo</title>
   
 
 
@@ -166,7 +171,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -220,7 +225,7 @@
         
         
           
-          <li class="menu-item menu-item-tags menu-item-active">
+          <li class="menu-item menu-item-tags">
 
     
     
@@ -273,25 +278,6 @@
   
     
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
   
 
   
@@ -312,57 +298,198 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>Ubuntu<small>Tag</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
+
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/05/Java-IO/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Cyuyuan15">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
         
-          <a class="post-title-link" href="/2019/07/10/win10和ubuntu双系统k380的配置/" itemprop="url">
-            
-              <span itemprop="name">win10和ubuntu双系统k380的配置</span>
-            
-          </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Java-IO
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-10T12:41:11+08:00" content="2019-07-10">
-          07-10
-        </time>
-      </div>
+              
+            
+          </h1>
+        
 
-    </header>
-  </article>
+        <div class="post-meta">
 
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-08-05 23:39:43 / Modified: 23:43:50" itemprop="dateCreated datePublished" datetime="2019-08-05T23:39:43+08:00">2019-08-05</time>
+            </span>
+          
+
+          
+            
+
+            
+          
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+                 Views:  
+                <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+              </span>
+            </span>
+          
+
+          
+
+          <br>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>使用BufferReader记得flush()刷新缓存区，BufferedWriter是缓冲输入流，意思是调用BufferedWriter的write方法时候。数据是先写入到缓冲区里，并没有直接写入到目的文件里。必须调用BufferedWriter的flush()方法。这个方法会刷新一下该缓冲流，也就是会把数据写入到目的文件里。或者你可以调用BufferedWriter的close()方法，该方法会在关闭该输入流之前先刷新一下该缓冲流。也会把数据写入到目的文件里。如果没有在里面的for()循环中添加 bw.flush(); 这句话，在if 的时候重新new  BufferedWriter(); 就把原来bw（缓冲区）中的覆盖掉了。于是就不能写进文件字符。</p>
 
       
     </div>
 
+    
+
+    
+      
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/05/Java-Socket/" rel="next" title="Java-Socket">
+                <i class="fa fa-chevron-left"></i> Java-Socket
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/08/06/database-事务/" rel="prev" title="DataBase-事务">
+                DataBase-事务 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -634,6 +761,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.2.0"></script>
+<script src="/js/post-details.js?v=7.2.0"></script>
+
+
 
   <script src="/js/next-boot.js?v=7.2.0"></script>
 
@@ -647,6 +778,8 @@
 
   
 
+
+  
 
 
   

@@ -101,7 +101,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="https://leetcode.com/problems/implement-stack-using-queues/ code in java:123456789101112131415161718192021222324252627282930313233class MyStack &amp;#123;    public LinkedList&amp;lt;Integer&amp;gt; queue;    /**">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-07-30T05:15:10.273Z">
+<meta property="og:updated_time" content="2019-08-05T15:02:35.495Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="leetcode-225-implement-stack-using-queues">
 <meta name="twitter:description" content="https://leetcode.com/problems/implement-stack-using-queues/ code in java:123456789101112131415161718192021222324252627282930313233class MyStack &amp;#123;    public LinkedList&amp;lt;Integer&amp;gt; queue;    /**">
@@ -357,13 +357,23 @@
                 
               
 
-              <time title="Created: 2019-07-30 13:14:03 / Modified: 13:15:10" itemprop="dateCreated datePublished" datetime="2019-07-30T13:14:03+08:00">2019-07-30</time>
+              <time title="Created: 2019-07-30 13:14:03" itemprop="dateCreated datePublished" datetime="2019-07-30T13:14:03+08:00">2019-07-30</time>
             </span>
           
 
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-08-05 23:02:35" itemprop="dateModified" datetime="2019-08-05T23:02:35+08:00">2019-08-05</time>
+              </span>
             
           
 
@@ -412,7 +422,7 @@
         <p><a href="https://leetcode.com/problems/implement-stack-using-queues/" target="_blank" rel="noopener">https://leetcode.com/problems/implement-stack-using-queues/</a></p>
 <h5 id="code-in-java"><a href="#code-in-java" class="headerlink" title="code in java:"></a>code in java:</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyStack</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> LinkedList&lt;Integer&gt; queue;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/** Initialize your data structure here. */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MyStack</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.queue = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/** Push element x onto stack. */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">push</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">        queue.add(x);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; queue.size() - <span class="number">1</span>;i++) &#123;</span><br><span class="line">            queue.add(queue.poll());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/** Removes the element on top of the stack and returns that element. */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">pop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> queue.poll();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/** Get the top element. */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">top</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> queue.peek();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/** Returns whether the stack is empty. */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">empty</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> queue.isEmpty();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-
+<a id="more"></a>
       
     </div>
 
@@ -537,7 +547,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">28</span>
+          <span class="site-state-item-count">30</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -595,7 +605,9 @@
         
           
         
-        <span class="site-state-item-count">13</span>
+          
+        
+        <span class="site-state-item-count">14</span>
         <span class="site-state-item-name">tags</span>
         
       </div>
