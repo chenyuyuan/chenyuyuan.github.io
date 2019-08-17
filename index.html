@@ -310,6 +310,191 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/16/algorithm-01-array-and-linked-list/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Cyuyuan15">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/08/16/algorithm-01-array-and-linked-list/" class="post-title-link" itemprop="url">algorithm-01-array-and-linked-list</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-08-16 21:43:02" itemprop="dateCreated datePublished" datetime="2019-08-16T21:43:02+08:00">2019-08-16</time>
+            </span>
+          
+
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-08-17 11:00:14" itemprop="dateModified" datetime="2019-08-17T11:00:14+08:00">2019-08-17</time>
+              </span>
+            
+          
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          <br>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="6道题"><a href="#6道题" class="headerlink" title="6道题"></a>6道题</h4><p>1.<a href="https://leetcode.com/problems/reverse-linked-list/" target="_blank" rel="noopener">https://leetcode.com/problems/reverse-linked-list/</a></p>
+<p>2.<a href="https://leetcode.com/problems/swap-nodes-in-pairs/" target="_blank" rel="noopener">https://leetcode.com/problems/swap-nodes-in-pairs/</a></p>
+<p>3.<a href="https://leetcode.com/problems/linked-list-cycle/" target="_blank" rel="noopener">https://leetcode.com/problems/linked-list-cycle/</a></p>
+<p>4.<a href="https://leetcode.com/problems/linked-list-cycle-ii/" target="_blank" rel="noopener">https://leetcode.com/problems/linked-list-cycle-ii/</a></p>
+<p>5.<a href="https://leetcode.com/problems/reverse-nodes-in-k-group/" target="_blank" rel="noopener">https://leetcode.com/problems/reverse-nodes-in-k-group/</a></p>
+<p>6.<a href="https://leetcode.com/problems/intersection-of-two-linked-lists/" target="_blank" rel="noopener">https://leetcode.com/problems/intersection-of-two-linked-lists/</a> (两支链表都没有环，那么有环的情况该怎么考虑呢？)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Definition for singly-linked list.</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ListNode</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    ListNode next;</span><br><span class="line">    ListNode(<span class="keyword">int</span> x) &#123; val = x; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h4><h5 id="1-https-leetcode-com-problems-reverse-linked-list"><a href="#1-https-leetcode-com-problems-reverse-linked-list" class="headerlink" title="1.https://leetcode.com/problems/reverse-linked-list/"></a>1.<a href="https://leetcode.com/problems/reverse-linked-list/" target="_blank" rel="noopener">https://leetcode.com/problems/reverse-linked-list/</a></h5><p>code:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">reverseList</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">        ListNode p = <span class="keyword">null</span>;</span><br><span class="line">        ListNode q = head, r = head;</span><br><span class="line">        <span class="keyword">while</span> (q != <span class="keyword">null</span>) &#123;</span><br><span class="line">            r = r.next;</span><br><span class="line">            q.next = p;</span><br><span class="line">            p = q;</span><br><span class="line">            q = r;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> p;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="2-https-leetcode-com-problems-swap-nodes-in-pairs"><a href="#2-https-leetcode-com-problems-swap-nodes-in-pairs" class="headerlink" title="2.https://leetcode.com/problems/swap-nodes-in-pairs/"></a>2.<a href="https://leetcode.com/problems/swap-nodes-in-pairs/" target="_blank" rel="noopener">https://leetcode.com/problems/swap-nodes-in-pairs/</a></h5><p>code:</p>
+<p>用迭代方法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">swapPairs</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">        ListNode firstPointer = <span class="keyword">new</span> ListNode(<span class="number">0</span>);</span><br><span class="line">        ListNode pre = firstPointer;</span><br><span class="line">        pre.next = head;</span><br><span class="line">        <span class="keyword">while</span>(pre.next != <span class="keyword">null</span> &amp;&amp; pre.next.next != <span class="keyword">null</span>) &#123;</span><br><span class="line">            ListNode a = pre.next;</span><br><span class="line">            ListNode b = pre.next.next;</span><br><span class="line">            a.next = b.next;</span><br><span class="line">            pre.next = b;</span><br><span class="line">            b.next = a;</span><br><span class="line">            pre = a;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> firstPointer.next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>递归方法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">swapPairs</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> ((head == <span class="keyword">null</span>)||(head.next == <span class="keyword">null</span>))</span><br><span class="line">            <span class="keyword">return</span> head; <span class="comment">// 包括返回null的情况和只有一个节点直接返回head的情况</span></span><br><span class="line">        ListNode n = head.next; <span class="comment">// 两个节点中右边那个点</span></span><br><span class="line">        head.next = swapPairs(head.next.next); <span class="comment">// head的next会连接下一组的n</span></span><br><span class="line">        n.next = head; <span class="comment">// 右边节点指向左边节点</span></span><br><span class="line">        <span class="keyword">return</span> n;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="3-https-leetcode-com-problems-linked-list-cycle"><a href="#3-https-leetcode-com-problems-linked-list-cycle" class="headerlink" title="3.https://leetcode.com/problems/linked-list-cycle/"></a>3.<a href="https://leetcode.com/problems/linked-list-cycle/" target="_blank" rel="noopener">https://leetcode.com/problems/linked-list-cycle/</a></h5><p>code:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">hasCycle</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">        ListNode slow = head, fast = head;</span><br><span class="line">        <span class="keyword">while</span> (slow != <span class="keyword">null</span> &amp;&amp; fast != <span class="keyword">null</span> &amp;&amp; fast.next != <span class="keyword">null</span>) &#123; <span class="comment">// 这里的fast.next != null一定要有，否则如果fast.next == null，下面的fast = fast.next.next;会出现Runtime Error</span></span><br><span class="line">            slow = slow.next;</span><br><span class="line">            fast = fast.next.next;</span><br><span class="line">            <span class="keyword">if</span> (fast == slow) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="4-https-leetcode-com-problems-linked-list-cycle-ii"><a href="#4-https-leetcode-com-problems-linked-list-cycle-ii" class="headerlink" title="4.https://leetcode.com/problems/linked-list-cycle-ii/"></a>4.<a href="https://leetcode.com/problems/linked-list-cycle-ii/" target="_blank" rel="noopener">https://leetcode.com/problems/linked-list-cycle-ii/</a></h5><p>fast指针与slow指针相遇的位置到环入口的距离，与起点到环入口的距离相等（为什么？）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">detectCycle</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">        ListNode slow = head;</span><br><span class="line">        ListNode fast = head;</span><br><span class="line">        <span class="keyword">while</span> (fast!=<span class="keyword">null</span> &amp;&amp; fast.next!=<span class="keyword">null</span>)&#123;</span><br><span class="line">            fast = fast.next.next;</span><br><span class="line">            slow = slow.next;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (fast == slow)&#123;</span><br><span class="line">                fast = head; </span><br><span class="line">                <span class="keyword">while</span> (fast != slow)&#123;</span><br><span class="line">                    slow = slow.next;</span><br><span class="line">                    fast = fast.next;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">return</span> slow;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="5-https-leetcode-com-problems-reverse-nodes-in-k-group"><a href="#5-https-leetcode-com-problems-reverse-nodes-in-k-group" class="headerlink" title="5.https://leetcode.com/problems/reverse-nodes-in-k-group/"></a>5.<a href="https://leetcode.com/problems/reverse-nodes-in-k-group/" target="_blank" rel="noopener">https://leetcode.com/problems/reverse-nodes-in-k-group/</a></h5><h5 id="6-https-leetcode-com-problems-intersection-of-two-linked-lists"><a href="#6-https-leetcode-com-problems-intersection-of-two-linked-lists" class="headerlink" title="6.https://leetcode.com/problems/intersection-of-two-linked-lists/"></a>6.<a href="https://leetcode.com/problems/intersection-of-two-linked-lists/" target="_blank" rel="noopener">https://leetcode.com/problems/intersection-of-two-linked-lists/</a></h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">getIntersectionNode</span><span class="params">(ListNode headA, ListNode headB)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(headA == <span class="keyword">null</span> || headB == <span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        ListNode a = headA;</span><br><span class="line">        ListNode b = headB;</span><br><span class="line">        <span class="keyword">while</span> (a != b) &#123;</span><br><span class="line">            a = a == <span class="keyword">null</span> ? headB : a.next;</span><br><span class="line">            b = b == <span class="keyword">null</span> ? headA : b.next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> a;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+          
+        
+      
+    </div>
+
+    
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/13/深入理解Java虚拟机-2-Java内存区域与内存溢出异常/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1747,177 +1932,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/01/leetcode-389-find-the-difference/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Cyuyuan15">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/08/01/leetcode-389-find-the-difference/" class="post-title-link" itemprop="url">leetcode-389-find-the-difference</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-08-01 17:03:44" itemprop="dateCreated datePublished" datetime="2019-08-01T17:03:44+08:00">2019-08-01</time>
-            </span>
-          
-
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-08-05 23:02:59" itemprop="dateModified" datetime="2019-08-05T23:02:59+08:00">2019-08-05</time>
-              </span>
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><a href="https://leetcode.com/problems/find-the-difference/" target="_blank" rel="noopener">https://leetcode.com/problems/find-the-difference/</a> [easy]</p>
-<h5 id="description"><a href="#description" class="headerlink" title="description:"></a>description:</h5><p>Given two strings <strong>s</strong> and <strong>t</strong> which consist of only lowercase letters.</p>
-<p>String <strong>t</strong> is generated by random shuffling string <strong>s</strong> and then add one more letter at a random position.</p>
-<p>Find the letter that was added in <strong>t</strong>.</p>
-<p>Example:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Input:</span><br><span class="line">s = &quot;abcd&quot;</span><br><span class="line">t = &quot;abcde&quot;</span><br><span class="line"></span><br><span class="line">Output:</span><br><span class="line">e</span><br><span class="line"></span><br><span class="line">Explanation:</span><br><span class="line">&apos;e&apos; is the letter that was added.</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/08/01/leetcode-389-find-the-difference/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1965,7 +1979,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">35</span>
+          <span class="site-state-item-count">36</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
