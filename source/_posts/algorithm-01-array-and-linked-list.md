@@ -4,7 +4,7 @@ date: 2019-08-16 21:43:02
 tags: algorithm
 ---
 
-#### 6道题
+#### 题目：
 
 1.https://leetcode.com/problems/reverse-linked-list/
 
