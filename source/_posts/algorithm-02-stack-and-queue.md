@@ -14,7 +14,7 @@ tags: algorithm
 
 4.https://leetcode.com/problems/backspace-string-compare
 
-#### solution:
+#### Solution:
 
 ##### 1.https://leetcode.com/problems/valid-parentheses
 
