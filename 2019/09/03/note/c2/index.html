@@ -93,18 +93,14 @@
   };
 </script>
 
-  <meta name="description" content="题目一：找出数组中重复的数字 在一个长度为n的数组里的所有数字都在0~n-1的范围内。数组中某些数字是重复的，但不知道有几个数字是重复的，也不知道每个数字重复了几次，请找出数组里任意一个重复的数字。">
-<meta name="keywords" content="spto">
-<meta property="og:type" content="article">
-<meta property="og:title" content="spto-03-duplicate-number-at-an-array">
-<meta property="og:url" content="http://yoursite.com/2019/07/22/spto-03-duplicate-number-at-an-array/index.html">
+  <meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2019/09/03/note/c2/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="题目一：找出数组中重复的数字 在一个长度为n的数组里的所有数字都在0~n-1的范围内。数组中某些数字是重复的，但不知道有几个数字是重复的，也不知道每个数字重复了几次，请找出数组里任意一个重复的数字。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-07-25T11:19:17.131Z">
+<meta property="og:updated_time" content="2019-09-03T06:31:50.789Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="spto-03-duplicate-number-at-an-array">
-<meta name="twitter:description" content="题目一：找出数组中重复的数字 在一个长度为n的数组里的所有数字都在0~n-1的范围内。数组中某些数字是重复的，但不知道有几个数字是重复的，也不知道每个数字重复了几次，请找出数组里任意一个重复的数字。">
+<meta name="twitter:title" content="Hexo">
 
 
 
@@ -112,7 +108,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/07/22/spto-03-duplicate-number-at-an-array/">
+  <link rel="canonical" href="http://yoursite.com/2019/09/03/note/c2/">
 
 
 
@@ -123,7 +119,7 @@
 </script>
 
   
-  <title>spto-03-duplicate-number-at-an-array | Hexo</title>
+  <title> | Hexo</title>
   
 
 
@@ -314,7 +310,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/22/spto-03-duplicate-number-at-an-array/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/03/note/c2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Cyuyuan15">
@@ -331,7 +327,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">spto-03-duplicate-number-at-an-array
+          <h1 class="post-title" itemprop="name headline">
 
               
             
@@ -357,24 +353,10 @@
                 
               
 
-              <time title="Created: 2019-07-22 11:23:19" itemprop="dateCreated datePublished" datetime="2019-07-22T11:23:19+08:00">2019-07-22</time>
+              <time title="Created: 2019-09-03 14:31:50" itemprop="dateCreated datePublished" datetime="2019-09-03T14:31:50+08:00">2019-09-03</time>
             </span>
           
 
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-07-25 19:19:17" itemprop="dateModified" datetime="2019-07-25T19:19:17+08:00">2019-07-25</time>
-              </span>
-            
           
 
           
@@ -419,13 +401,7 @@
       
 
       
-        <p>题目一：找出数组中重复的数字</p>
-<p>在一个长度为n的数组里的所有数字都在0~n-1的范围内。数组中某些数字是重复的，但不知道有几个数字是重复的，也不知道每个数字重复了几次，请找出数组里任意一个重复的数字。</p>
-<a id="more"></a>
-
-<h5 id="code-in-java"><a href="#code-in-java" class="headerlink" title="code in java:"></a>code in java:</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">question03</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> ArrayList&lt;Integer&gt; <span class="title">duplicate</span><span class="params">(<span class="keyword">int</span>[] numbers)</span> </span>&#123;</span><br><span class="line">        ArrayList&lt;Integer&gt; ans = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">if</span> (numbers == <span class="keyword">null</span> || numbers.length == <span class="number">0</span>) &#123;</span><br><span class="line">            System.out.print(<span class="string">"is null"</span>);</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; numbers.length;++i) &#123;</span><br><span class="line">            <span class="keyword">if</span>(numbers[i] &lt; <span class="number">0</span> || numbers[i] &gt; numbers.length) &#123;</span><br><span class="line">                System.out.print(<span class="string">"get over"</span>);</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; numbers.length;++i) &#123;</span><br><span class="line">            <span class="keyword">while</span> (numbers[i] != i) &#123;</span><br><span class="line">                <span class="keyword">if</span> (numbers[i] == numbers[numbers[i]]) &#123;</span><br><span class="line">                    <span class="keyword">if</span>(!ans.contains(numbers[i]))</span><br><span class="line">                        ans.add(numbers[i]);</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">int</span> temp = numbers[i];</span><br><span class="line">                numbers[i] = numbers[temp];</span><br><span class="line">                numbers[temp] = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] list = &#123;<span class="number">2</span>, <span class="number">3</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">2</span>, <span class="number">5</span>, <span class="number">3</span>,<span class="number">1</span>,<span class="number">1</span>&#125;;</span><br><span class="line">        ArrayList&lt;Integer&gt; al = duplicate(list);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i : al) &#123;</span><br><span class="line">            System.out.print(i+ <span class="string">" "</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
+        
       
     </div>
 
@@ -450,15 +426,6 @@
 
     <footer class="post-footer">
       
-        
-          
-        
-        <div class="post-tags">
-          
-            <a href="/tags/spto/" rel="tag"># spto</a>
-          
-        </div>
-      
 
       
       
@@ -468,8 +435,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/19/leetcode-1116-print-zero-even-odd/" rel="next" title="leetcode-1116-print-zero-even-odd">
-                <i class="fa fa-chevron-left"></i> leetcode-1116-print-zero-even-odd
+              <a href="/2019/08/22/Java-final-static/" rel="next" title="Java-final-static">
+                <i class="fa fa-chevron-left"></i> Java-final-static
               </a>
             
           </div>
@@ -478,8 +445,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/07/25/spto-05-replace-space/" rel="prev" title="spto-5-replace-space">
-                spto-5-replace-space <i class="fa fa-chevron-right"></i>
+              <a href="/2019/09/04/algorithm-sort/" rel="prev" title="algorithm-sort">
+                algorithm-sort <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -524,17 +491,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <div class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
 
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -640,23 +598,6 @@
         </div>
       </div>
 
-      
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-            
-            
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#code-in-java"><span class="nav-number">1.</span> <span class="nav-text">code in java:</span></a></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
       
 
       
