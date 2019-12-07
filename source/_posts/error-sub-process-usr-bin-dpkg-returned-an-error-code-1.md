@@ -12,7 +12,9 @@ E: Sub-process /usr/bin/dpkg returned an error code (1)
 
 ##### environment: 
 
-ubuntu
+```
+Ubuntu 16.04
+```
 
 ##### solution:
 
