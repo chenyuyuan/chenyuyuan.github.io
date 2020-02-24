@@ -24,5 +24,7 @@ tags: [raspberry-pi]
 
 ​	2.4树莓派SSH服务开机自启动：打开/etc/rc.local文件，在语句exit 0之前加入：/etc/init.d/ssh start
 
-​		
+3,安装其它库
+
+  3.1wiringPi、bcm2835、python库 ：http://www.waveshare.net/study/portal.php?mod=view&aid=742
 
